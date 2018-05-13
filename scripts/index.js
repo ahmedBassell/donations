@@ -3,7 +3,7 @@
 /* @_tomesch */
 
 // Add values to the values array and see what happens :)
-var TotalCount = 0;
+var TotalCount = 1800;
 var Sunday,Monday,Tuesday,Wednesday;
 Sunday = 1800;
 Monday = 0;
