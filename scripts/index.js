@@ -5,15 +5,27 @@
 // Add values to the values array and see what happens :)
 var TotalCount = 0;
 var Sunday,Monday,Tuesday,Wednesday;
-Sunday = 3200;
+Sunday = 0;
 Monday = 0;
 Tuesday = 0;
 Wednesday = 0;
 var values = [Sunday, Monday, Tuesday, Wednesday];
-
 TotalCount = values.reduce(function(e1, e2) { return e1 + e2; });
-
 document.getElementById('totalCount').innerHTML = TotalCount;
+
+var ref = firebase.database().ref();
+ref.on("value", function(snapshot){
+    Sunday = snapshot.val().sundayDonations;
+    Monday = snapshot.val().mondayDonations;
+    Tuesday = snapshot.val().tuesdayDonations;
+    Wednesday = snapshot.val().wednesdayDonations;
+    var values = [Sunday, Monday, Tuesday, Wednesday];
+    TotalCount = values.reduce(function(e1, e2) { return e1 + e2; });
+    document.getElementById('totalCount').innerHTML = TotalCount;
+    drawChart(values,"#chart",100) // You can adjust the margin between each bar by changing 10 to whatever you like
+}, function(err) {
+  console.log(err);
+});
 
 drawChart(values,"#chart",100) // You can adjust the margin between each bar by changing 10 to whatever you like
 
