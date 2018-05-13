@@ -22,6 +22,9 @@ ref.on("value", function(snapshot){
     var values = [Sunday, Monday, Tuesday, Wednesday];
     TotalCount = values.reduce(function(e1, e2) { return e1 + e2; });
     document.getElementById('totalCount').innerHTML = TotalCount;
+    drawChart(values,"#chart",100) // You can adjust the margin between each bar by changing 10 to whatever you like
+}, function(err) {
+  console.log(err);
 });
 
 drawChart(values,"#chart",100) // You can adjust the margin between each bar by changing 10 to whatever you like
