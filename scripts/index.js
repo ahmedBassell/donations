@@ -5,7 +5,7 @@
 // Add values to the values array and see what happens :)
 var TotalCount = 0;
 var Sunday,Monday,Tuesday,Wednesday;
-Sunday = 1800;
+Sunday = 3200;
 Monday = 0;
 Tuesday = 0;
 Wednesday = 0;
