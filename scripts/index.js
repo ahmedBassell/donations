@@ -4,13 +4,12 @@
 
 // Add values to the values array and see what happens :)
 var TotalCount = 0;
-var team1,team2,team3,team4,team5;
-team1 = 0;
-team2 = 0;
-team3 = 0;
-team4 = 0;
-team5 = 0;
-var values = [team1, team2, team3, team4, team5];
+var Sunday,Monday,Tuesday,Wednesday;
+Sunday = 1800;
+Monday = 0;
+Tuesday = 0;
+Wednesday = 0;
+var values = [Sunday, Monday, Tuesday, Wednesday];
 document.getElementById('totalCount').innerHTML = TotalCount;
 
 drawChart(values,"#chart",100) // You can adjust the margin between each bar by changing 10 to whatever you like
