@@ -14,12 +14,12 @@ TotalCount = values.reduce(function(e1, e2) { return e1 + e2; });
 document.getElementById('totalCount').innerHTML = TotalCount;
 
 var ref = firebase.database().ref();
-ref.on("donations-f206b", function(snapshot){
-  var newDonations = snapshot.val();
-    Sunday = newDonations.sundayDonations;
-    Monday = newDonations.mondayDonations;
-    Tuesday = newDonations.tuesdayDonations;
-    Wednesday = newDonations.wednesdayDonations;
+ref.on("value", function(snapshot){
+    Sunday = snapshot.val().sundayDonations;
+    Monday = snapshot.val().mondayDonations;
+    Tuesday = snapshot.val().tuesdayDonations;
+    Wednesday = snapshot.val().wednesdayDonations;
+    var values = [Sunday, Monday, Tuesday, Wednesday];
     TotalCount = values.reduce(function(e1, e2) { return e1 + e2; });
     document.getElementById('totalCount').innerHTML = TotalCount;
 });
