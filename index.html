@@ -12,12 +12,11 @@
         <div class="row u-margin-bottom--2x">
           <div class="col-sm">
             <div class="description">
-              <h4 class="mb-6">Welcome to Instabug Doniations website</h2>
+              <h4 class="mb-6">Instabug Doniations progress</h2>
 
               <h5 class="">
                 Our target amount is to collect <strong>25K EGP</strong> in donations.
-    This basically means sending shonat ramadan to more than <strong>300 families</strong>
-    all around Egypt and helping <strong>2 families</strong> in creating a sustainable income through a small project.
+    This basically means sending shonat ramadan to more than <strong>300 families</strong> all around Egypt.
     <h2 class="u-margin-top--2x">
       Total Donations:
       <strong>
@@ -34,7 +33,7 @@
               <img
               width="300"
               height="300"
-              src="assets/images/ramadan.jpg"/>
+              src="assets/images/instabugramadan2019.jpg"/>
             </div>
           </div>
         </div>
@@ -42,25 +41,28 @@
 
       <div id="chart"></div>
       <div class="labels">
-        <div class="label">Sunday</div>
-        <div class="label">Monday</div>
-        <div class="label">Tuesday</div>
-        <div class="label">Wednesday</div>
+        <div class="label">Sunday 5/5</div>
+        <div class="label">Monday 6/5</div>
+        <div class="label">Tuesday 7/5</div>
+        <div class="label">Wednesday 8/5</div>
+        <div class="label">Thursday 9/5</div>
+        <div class="label">Sunday 11/5</div>
+        <div class="label">Monday 12/5</div>
       </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
     <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyANm6kffIxbQqrLmgd_811ldPOciUKWq_g",
-        authDomain: "donations-f206b.firebaseapp.com",
-        databaseURL: "https://donations-f206b.firebaseio.com",
-        projectId: "donations-f206b",
-        storageBucket: "donations-f206b.appspot.com",
-        messagingSenderId: "184774834532"
+      var firebaseConfig = {
+        apiKey: "AIzaSyCqRuLjDVblclSE0L1EmKcMRPUPYPw97q8",
+        authDomain: "instabug-donations.firebaseapp.com",
+        databaseURL: "https://instabug-donations.firebaseio.com",
+        projectId: "instabug-donations",
+        storageBucket: "instabug-donations.appspot.com",
+        messagingSenderId: "216840668539",
+        appId: "1:216840668539:web:edb05cf587f2c352"
       };
-      firebase.initializeApp(config);
+      firebase.initializeApp(firebaseConfig);
     </script>
     <script  type="text/javascript" src="scripts/index.js"></script>
   </body>
