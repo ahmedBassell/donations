@@ -9,7 +9,10 @@ Sunday = 0;
 Monday = 0;
 Tuesday = 0;
 Wednesday = 0;
-var values = [Sunday, Monday, Tuesday, Wednesday];
+Thursday = 0;
+Sunday2 = 0;
+Monday2 = 0;
+var values = [Sunday, Monday, Tuesday, Wednesday, Thursday, Sunday2, Monday2];
 TotalCount = values.reduce(function(e1, e2) { return e1 + e2; });
 document.getElementById('totalCount').innerHTML = TotalCount;
 
@@ -19,7 +22,10 @@ ref.on("value", function(snapshot){
     Monday = snapshot.val().mondayDonations;
     Tuesday = snapshot.val().tuesdayDonations;
     Wednesday = snapshot.val().wednesdayDonations;
-    var values = [Sunday, Monday, Tuesday, Wednesday];
+    Thursday = snapshot.val().wednesdayDonations;
+    Sunday2 = snapshot.val().sunday2Donations;
+    Monday2 = snapshot.val().monday2Donations;
+    var values = [Sunday, Monday, Tuesday, Wednesday, Thursday, Sunday2, Monday2];
     TotalCount = values.reduce(function(e1, e2) { return e1 + e2; });
     document.getElementById('totalCount').innerHTML = TotalCount;
     drawChart(values,"#chart",100) // You can adjust the margin between each bar by changing 10 to whatever you like
@@ -32,7 +38,7 @@ drawChart(values,"#chart",100) // You can adjust the margin between each bar by 
 function drawChart(data,selector,padding){
   var max = Math.max.apply(Math, data);
 	var chart = document.querySelector(selector);
-	var barwidth = ((chart.offsetWidth-(values.length-1)*padding-(data.length)*10)/data.length);
+	var barwidth = ((chart.offsetWidth-((data.length-1)*padding)-(data.length)*10)/data.length);
 	var sum = data.reduce(function(pv, cv) { return pv + cv; }, 0);
 	var left = 0;
 	for (var i in data){
